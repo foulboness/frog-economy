@@ -52,11 +52,3 @@ frog-economy-best-v1
 ```
 
 It is local to that browser and device. Clearing site data or using a different browser may reset or separate the score.
-
-zip_path = "/mnt/data/frog-economy.zip"
-with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-    for name in files:
-        z.write(os.path.join(base, name), arcname=f"frog-economy/{name}")
-
-print("Created:", zip_path)
-print("Files:", ", ".join(files.keys()))
