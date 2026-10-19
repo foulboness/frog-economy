@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b2a">
+  <title>Frog Economy</title>
+  <link rel="icon" href="https://i.pinimg.com/736x/ae/cd/85/aecd851f701630ea457b46ec90a89c38.jpg" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"></header>
+
+    <section class="game-layout" aria-label="Game">
+      <div class="game-column">
+        <div class="hud">
+          <div class="hud-item"><span class="hud-label">CURRENT SCORE</span><strong id="score">0000</strong></div>
+          <div class="hud-item lives-item"><span class="hud-label">LIVES LEFT</span><strong id="lives" aria-label="3 lives">♥ ♥ ♥</strong></div>
+          <div class="hud-item"><span class="hud-label">PERSONAL BEST</span><strong id="best">0000</strong></div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="game" width="800" height="520" aria-label="Frog Economy game area" tabindex="0"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <p class="eyebrow" id="overlay-eyebrow">WELCOME, INVESTOR</p>
+              <h2 id="overlay-title">The pond<br><em>is open.</em></h2>
+              <p id="overlay-copy">Catch the frogs. Let the poop pass. Three missed frogs and your business is finished.</p>
+              <button id="start-button" class="primary-button">Start the shift <span>↗</span></button>
+              <p class="overlay-hint">PRESS SPACE TO BEGIN</p>
+            </div>
+          </div>
+          <div class="pause-pill" id="pause-pill" hidden>Ⅱ PAUSED</div>
+        </div>
+        <div class="game-footer">
+          <span><span class="key">←</span> <span class="key">→</span> MOVE</span>
+          <span><span class="key">A</span> <span class="key">D</span> MOVE</span>
+          <span><span class="key">P</span> PAUSE</span>
+          <span class="footer-note">MOUSE + TOUCH READY</span>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <section class="side-card ledger">
+          <p class="eyebrow">01 / THE LEDGER</p>
+          <h3>Market rates</h3>
+          <div class="rate-row"><span class="frog-icon large-frog">●</span><span class="rate-name">Big frog<small>COMMON STOCK</small></span><strong>+1</strong></div>
+          <div class="rate-row"><span class="frog-icon medium-frog">●</span><span class="rate-name">Medium frog<small>GROWTH STOCK</small></span><strong>+3</strong></div>
+          <div class="rate-row"><span class="frog-icon small-frog">●</span><span class="rate-name">Small frog<small>BLUE CHIP</small></span><strong>+6</strong></div>
+          <div class="rate-row"><span class="poop-icon">✹</span><span class="rate-name">Poop<small>TOXIC ASSET</small></span><strong class="negative">−1 ♥</strong></div>
+        </section>
+
+        <section class="side-card how-to">
+          <p class="eyebrow">02 / YOUR STRATEGY</p>
+          <h3>Read the room.</h3>
+          <p>Catch frogs on your lily pad to earn points. A frog that hits the water is a missed opportunity — and costs a life.</p>
+          <p>Poop is different. <strong>Do not catch it.</strong> Let it fall past you and keep your life.</p>
+        </section>
+
+        <section class="side-card difficulty">
+          <div class="difficulty-head"><span class="eyebrow">03 / MARKET VOLATILITY</span><strong id="pace-label">1.00×</strong></div>
+          <div class="meter"><span id="pace-meter"></span></div>
+          <p id="pace-copy">A calm pond. For now.</p>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="page-footer">
+      <span>FROG ECONOMY™ — NO FROGS WERE EMPLOYED FAIRLY.</span>
+      <span>BUILT FOR THE LOVE OF THE POND.</span>
+    </footer>
+  </main>
+  <script src="leaderboard.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
