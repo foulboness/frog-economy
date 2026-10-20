@@ -1,7 +1,5 @@
 # Frog Economy 
 
-A tiny arcade browser game about catching frogs, avoiding poop, and surviving a very volatile pond economy.
-
 Built with plain **HTML, CSS, JavaScript, and Canvas**. No framework, build step, database, or external game library is required.
 
 ## Play locally
